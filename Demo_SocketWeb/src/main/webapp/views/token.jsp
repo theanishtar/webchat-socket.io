@@ -77,8 +77,9 @@
 				setConnected(true);
 				console.log('Connected: ' + frame);
 				stompClient.subscribe('/topic/greetings', function(greeting) {
-					
-					showGreeting(JSON.parse(greeting.body).content);
+					if(JSON.parse(greeting.body).token == "12e544f"){
+						showGreeting(JSON.parse(greeting.body).content);
+					}
 				});
 			});
 		}
