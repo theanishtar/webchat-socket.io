@@ -31,4 +31,9 @@ public class GreetingController {
 	  return "token";
   }
 
+	@RequestMapping("/token")
+  String Chat3(Model m) {
+	  return "token";
+  }
+
 }
